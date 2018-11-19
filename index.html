@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700|Roboto:100,500" rel="stylesheet">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    <style>
+        @keyframes example {
+            0% {
+                transform: scale(0) translate(50%, -50%);
+            }
+            100% {
+                transform: scale(1.2) translate(50%, -50%);
+            }
+        }
+
+        #loader-wrapper {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #131719;
+            z-index: 100000;
+        }
+
+        #loader-wrapper img {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            animation-name: example;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" /> -->
+    <title>TEMPLATE</title>
+</head>
+<body class="mCustomScrollbar" data-mcs-theme="dark">
+<div class="content">
+    <div id="loader-wrapper">
+        <img src="img/logo.png" alt="">
+    </div>
+    <div id="content-block">
+        <header>
+            <div class="burger-wrap">
+                <div class="burger-container">
+                    <div class="burger burger2"></div>
+                </div>
+            </div>
+            <div class="container-fluid navigation-wrapp">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <a href="#" class="logo">
+                            <img src="img/logo.png" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="col-lg-7">
+                        <nav class="navigation">
+                            <ul id="top-menu">
+                                <li><a href="#our-service">Наші Послуги</a></li>
+                                <li><a href="#about">Про клініку</a></li>
+                                <li><a href="#price">Прейскурант</a></li>
+                                <li><a href="#our-team">Наша Команда</a></li>
+                                <li><a href="#contact">Контакти</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3 right-side">
+                        <div class="register-online">
+                            <img src="img/tooth.png" alt="">
+                            <span>Записатись онлайн</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="top-header-slider">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="slide-wrapp" style="background-image: url(img/slide.jpg)">
+                            <div class="description">
+                                <h5 class="title">Pukki Dental Clinic - це</h5>
+                                <ul>
+                                    <li>новітні технології діагностики та лікування</li>
+                                    <li>міжнародна співпраця лікарів</li>
+                                    <li>повний спектр стоматологічних послуг</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrapp"
+                             style="background-image: url(img/slide2.jpg); background-position: 0%;">
+                            <div class="description">
+                                <h5 class="title">Даруємо знижки до -15%</h5>
+                                <p>на послуги професійної гігієни та відбілювання</p>
+                                <div class="register-online">
+                                    <img src="img/tooth2.png" alt="">
+                                    <span>Записатись онлайн</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrapp"
+                             style="background-image: url(img/slide3.jpg); background-position: 0%;">
+                            <div class="description">
+                                <h5 class="title">Нова послуга - косметологія!</h5>
+                                <p>Мезотерапія, біоревіталізація, плазмоліфтинг, доглядові </br> процедури, апаратна
+                                    косметологія
+                                </p>
+                                <div class="register-online">
+                                    <img src="img/tooth2.png" alt="">
+                                    <span>Записатись онлайн</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrapp"
+                             style="background-image: url(img/slide4.jpg); background-position: 0%;">
+                            <div class="description">
+                                <h5 class="title">Ваша безпека - наш обов’язок!</h5>
+                                <ul>
+                                    <li>лише одноразові розхідні матеріали</li>
+                                    <li>ретельна стерилізація інструментарію сучасними апаратами</li>
+                                    <li>щоденний контроль якості обробки інструментарію</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <section class="our-services" id="our-service">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="title wow fadeInUp" data-wow-duration="2s" data-wow-offset="100">
+                            Наші Послуги
+                        </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 item">
+                        <img src="img/icon1.svg" alt="">
+                        <img src="img/icon1.2.svg" alt="">
+                        <h6>Діагностика</h6>
+                        <p>Використання безпечного цифрового компютерного ортопантографа, який вчасно виявляє
+                            проблему</p>
+                    </div>
+
+                    <div class="col-lg-3 item">
+                        <img src="img/tooth-icon2.svg" alt="">
+                        <img src="img/tooth-icon1.svg" alt="">
+                        <h6>Професійна гігієна </br> та відбілювання</h6>
+                        <p>Використання безпечного цифрового компютерного ортопантографа, який вчасно виявляє
+                            проблему</p>
+                    </div>
+
+                    <div class="col-lg-3 item">
+                        <img src="img/tooth-icon3.1.svg" alt="">
+                        <img src="img/tooth-icon3.2.svg" alt="">
+                        <h6>Терапевтична стоматологія</h6>
+                        <p>Використання безпечного цифрового компютерного ортопантографа, який вчасно виявляє
+                            проблему, який вчасно виявляє
+                            проблему</p>
+                    </div>
+
+                    <div class="col-lg-3 item">
+                        <img src="img/tooth-icon4.1.svg" alt="">
+                        <img src="img/tooth-icon4.2.svg" alt="">
+                        <h6>Хірургічна стоматологія</h6>
+                        <p>Використання безпечного цифрового компютерного ортопантографа</p>
+                    </div>
+
+                    <div class="col-lg-3 item">
+                        <img src="img/tooth-icon5.1.svg" alt="">
+                        <img src="img/tooth-icon5.2.svg" alt="">
+                        <h6>Протезування</h6>
+                        <p>Використання безпечного цифрового компютерного ортопантографа, який вчасно виявляє
+                            проблему</p>
+                    </div>
+
+                    <div class="col-lg-3 item">
+                        <img src="img/tooth-icon6.1.svg" alt="">
+                        <img src="img/tooth-icon6.2.svg" alt="">
+                        <h6>Ортодонтія</h6>
+                        <p>Використання безпечного цифрового компютерного ортопантографа, який вчасно виявляє
+                            проблему</p>
+                    </div>
+
+                    <div class="col-lg-3 item">
+                        <img src="img/tooth-icon7.1.svg" alt="">
+                        <img src="img/tooth-icon7.2.svg" alt="">
+                        <h6>Імплантологія</h6>
+                        <p>Використання безпечного цифрового компютерного ортопантографа, який вчасно виявляє
+                            проблему</p>
+                    </div>
+
+                    <div class="col-lg-3 item">
+                        <img src="img/tooth-icon8.2.svg" alt="">
+                        <img src="img/tooth-icon8.1.svg" alt="">
+                        <h6>Дитяча стоматологія</h6>
+                        <p>Використання безпечного цифрового компютерного ортопантографа, який вчасно виявляє
+                            проблему</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="title wow fadeInUp" data-wow-duration="2s" data-wow-offset="100">
+                            Про Клініку
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="about-wrap center-item">
+                <div class="bg wow fadeInLeft" data-wow-duration="2s" data-wow-offset="100"
+                     style="background-image: url(img/about.jpg)">
+
+                </div>
+                <div class="about-descr container">
+                    <ul>
+                        <li class="wow fadeInRight" data-wow-duration="2s" data-wow-offset="100" data-wow-delay="1s">
+                            <span class="count">15</span> років вашої довіри
+                        </li>
+                        <li class="wow fadeInRight" data-wow-duration="2s" data-wow-offset="100" data-wow-delay="1.3s">
+                            до <span class="count">30</span> років досвіду спеціалістів
+                        </li>
+                        <li class="wow fadeInRight" data-wow-duration="2s" data-wow-offset="100" data-wow-delay="1.5s">
+                            Понад <span
+                                class="count">10000</span>
+                            усміхнених пацієнтів
+                        </li>
+                    </ul>
+                    <div class="description wow fadeInRight" data-wow-duration="2s" data-wow-offset="100"
+                         data-wow-delay="1.7s">
+                        <p>
+                            <strong>Pukii Dental Clinic</strong> – це сімейна справа. Досвід лікарів-стоматологів
+                            набутий
+                            роками, який
+                            передається з покоління в покоління. Ми невпинно удосконалюємось, застосовуємо лише новітні
+                            методики лікування та діагностики світових стандартів, щоб забезпечити найвищий рівень
+                            надання
+                            стоматологічних послуг для Вас.
+
+                        <p>Ми вдячні Вам за довіру! Та завжди раді бачити Вашу красиву усмішку в<br>
+                            <strong>Pukii Dental Clinic!</strong></p>
+                        </p>
+                    </div>
+                    <div class="register-online wow fadeInRight" data-wow-duration="2s" data-wow-offset="100"
+                         data-wow-delay="2s">
+                        <img src="img/tooth.png" alt="">
+                        <span>Записатись онлайн</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="price" id="price">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="title wow fadeInUp" data-wow-duration="2s" data-wow-offset="100">
+                            Прейскурант
+                        </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="accordeon">
+                        <div class="accordeon-wrapp">
+                            <div class="accordeon-title active">
+                                Діагностика
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="accordeon-toggle" style="display: block;">
+                                <div class="simple-article">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, co
+                                        <span>від 400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        <span>від 4200грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor
+                                        <span>від 2400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum
+                                        <span>від 300грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon-wrapp">
+                            <div class="accordeon-title">
+                                Гігієна та відбілювання
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="accordeon-toggle" style="display: none;">
+                                <div class="simple-article">
+                                    <p>
+                                        Lorem ipsum
+                                        <span>від 400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        <span>від 4200грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit
+                                        <span>від 2400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet,
+                                        <span>від 300грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon-wrapp">
+                            <div class="accordeon-title">
+                                Протезування
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="accordeon-toggle" style="display: none;">
+                                <div class="simple-article">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, co
+                                        <span>від 400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        <span>від 4200грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor
+                                        <span>від 2400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum
+                                        <span>від 300грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon-wrapp">
+                            <div class="accordeon-title">
+                                Імплантологія
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="accordeon-toggle" style="display: none;">
+                                <div class="simple-article">
+                                    <p>
+                                        Lorem ipsum
+                                        <span>від 400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        <span>від 4200грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit
+                                        <span>від 2400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet,
+                                        <span>від 300грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon-wrapp">
+                            <div class="accordeon-title">
+                                Терапевтична стоматологія
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="accordeon-toggle" style="display: none;">
+                                <div class="simple-article">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, co
+                                        <span>від 400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        <span>від 4200грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor
+                                        <span>від 2400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum
+                                        <span>від 300грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon-wrapp">
+                            <div class="accordeon-title">
+                                Дитяча стоматологія
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="accordeon-toggle" style="display: none;">
+                                <div class="simple-article">
+                                    <p>
+                                        Lorem ipsum
+                                        <span>від 400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        <span>від 4200грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit
+                                        <span>від 2400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet,
+                                        <span>від 300грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon-wrapp">
+                            <div class="accordeon-title">
+                                Ортодонтія
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="accordeon-toggle" style="display: none;">
+                                <div class="simple-article">
+                                    <p>
+                                        Lorem ipsum
+                                        <span>від 400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        <span>від 4200грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit
+                                        <span>від 2400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet,
+                                        <span>від 300грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon-wrapp">
+                            <div class="accordeon-title">
+                                Хірургічна стоматологія
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="accordeon-toggle" style="display: none;">
+                                <div class="simple-article">
+                                    <p>
+                                        Lorem ipsum
+                                        <span>від 400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        <span>від 4200грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit
+                                        <span>від 2400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet,
+                                        <span>від 300грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon-wrapp">
+                            <div class="accordeon-title">
+                                Косметологія
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="accordeon-toggle" style="display: none;">
+                                <div class="simple-article">
+                                    <p>
+                                        Lorem ipsum
+                                        <span>від 400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        <span>від 4200грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit
+                                        <span>від 2400грн</span>
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet,
+                                        <span>від 300грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-team" id="our-team">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="title wow fadeInUp" data-wow-duration="2s" data-wow-offset="100">
+                            Наша команда
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-ourTeam-container wow fadeInUp" data-wow-duration="2s" data-wow-offset="100">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-iteam-bg" style="background-image: url(img/team1.jpg)">
+                        </div>
+                        <div class="our-team-descr">
+                            <h5>Бойко Оксана Ігорівна</h5>
+                            <h6>Лікар - анастезіолог</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-iteam-bg" style="background-image: url(img/team2.jpg)">
+                        </div>
+                        <div class="our-team-descr">
+                            <h5>Бойко Оксана Ігорівна</h5>
+                            <h6>Лікар - анастезіолог</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-iteam-bg" style="background-image: url(img/team3.jpg)">
+                        </div>
+                        <div class="our-team-descr">
+                            <h5>Бойко Оксана Ігорівна</h5>
+                            <h6>Лікар - анастезіолог</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-iteam-bg" style="background-image: url(img/team4.jpg)">
+                        </div>
+                        <div class="our-team-descr">
+                            <h5>Бойко Оксана Ігорівна</h5>
+                            <h6>Лікар - анастезіолог</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-iteam-bg" style="background-image: url(img/team2.jpg)">
+                        </div>
+                        <div class="our-team-descr">
+                            <h5>Бойко Оксана Ігорівна</h5>
+                            <h6>Лікар - анастезіолог</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="title wow fadeInUp" data-wow-duration="2s" data-wow-offset="100">
+                            Контакти
+                        </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="contact-item">
+                            <span>Адреса:</span>
+                            <p>Львівська обл. м. Самбір<br>
+                                вул. Чайковського 29Б <br>(навпроти магазину «Метро»)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="contact-item">
+                            <span>Телефон:</span>
+                            <p><a href="tel:+496170961709">+38 (068) 399 36 69;</a></p>
+                            <p><a href="tel:+496170961709">+38 (067) 784 13 19;</a></p>
+                            <p><a href="tel:+496170961709">+38 (067) 491 77 78;</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="contact-item">
+                            <span>Email:</span>
+                            <p><a href="mailto:someone@example.com">ivanpukii@outlook.com</a></p>
+                            <p><a href="mailto:someone@example.com">pukijoks@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="map-canvas" data-lat="34.0151244" data-lng="-118.4729871" data-zoom="15"></div>
+                    <div class="addresses-block">
+                        <a class="marker" data-lat="34.0151244" data-lng="-118.4729871"
+                           data-string="1. Here is some address or email or phone or something else..."></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footer-wrapp">
+                        <p class="copyright">© Pukii Dental Clinic 2019</p>
+                        <div class="share">
+                            <p>Слідкуйте за нами:</p>
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="img/instagram.png" alt=""></a></li>
+                                <li><a href="#" target="_blank"><img src="img/facebook.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <div class="popup">
+            <div class="online-recording">
+                <img src="img/popup-tooth.svg" alt="">
+                <h4>Онлайн запис</h4>
+            </div>
+            <form action="">
+                <div class="form-input">
+                    <input type="text">
+                </div>
+                <div class="form-input">
+                    <input type="text">
+                </div>
+                <div class="form-input">
+                    <input type="text">
+                </div>
+                <div class="form-input">
+                    <input type="text" id="datepicker">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.nicescroll.iframehelper.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/common.js"></script>
+
+<script type='text/javascript'
+        src='http://maps.googleapis.com/maps/api/js?key=AIzaSyB-6ShYKyjzORHybNAosmUdEWevaXeC5sI&#038;language=en&#038;ver=4.9.8'></script>
+<script src="js/map.js"></script>
+
+</body>
+</html>
