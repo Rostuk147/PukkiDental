@@ -229,5 +229,27 @@ $(function () {
 
     $("#datepicker").datepicker();
 
+
+    $('.popup-input').on('keypress', function (e) {
+        const pattern = /[0-9\+\-\ ]/;
+        const inputChar = String.fromCharCode(event.charCode);
+        if (event.keyCode !== 8 && !pattern.test(inputChar)) {
+            event.preventDefault();
+        }
+    });
+
+    $('.select').on('click', function () {
+        $(this).find('ul').slideToggle();
+        $(this).find('i').toggleClass('active');
+    })
+
+    $('.select ul li').on('click', function () {
+        const text = $(this).text();
+        $(this).closest('.select').find('span').text(text);
+        $('.select ul li').removeClass('active');
+        $(this).addClass('active');
+    })
+
+
 });
 
