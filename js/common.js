@@ -29,12 +29,14 @@ $(function () {
     $(window).load(function () {
         initSwiper();
         $('body').addClass('loaded');
-        $("body").niceScroll({
-            cursorcolor: "#131719",
-            cursorwidth: "10px",
-            zindex: 1000,
-            scrollspeed: 100
-        });
+        if (!_ismobile) {
+            $("body").niceScroll({
+                cursorcolor: "#131719",
+                cursorwidth: "10px",
+                zindex: 1000,
+                scrollspeed: 100
+            });
+        }
         window.setTimeout(() => {
             $('#loader-wrapper').fadeOut();
         }, 400);
@@ -164,6 +166,7 @@ $(function () {
 
     //Toggle Burger Menu
     $('.burger').on('click', function () {
+        $('html, body').toggleClass('no-scroll');
         $(this).toggleClass('burger2-open');
         $(this).closest('header').find('.navigation-wrapp').toggleClass('active');
     });
@@ -225,6 +228,7 @@ $(function () {
     $('.navigation ul li a').on('click', function () {
         $(this).closest('.navigation-wrapp').removeClass('active');
         $(this).closest('header').find('.burger2').removeClass('burger2-open');
+        $('html, body').removeClass('no-scroll');
     });
 
     $("#datepicker").datepicker();
@@ -241,14 +245,40 @@ $(function () {
     $('.select').on('click', function () {
         $(this).find('ul').slideToggle();
         $(this).find('i').toggleClass('active');
-    })
+    });
 
     $('.select ul li').on('click', function () {
         const text = $(this).text();
         $(this).closest('.select').find('span').text(text);
         $('.select ul li').removeClass('active');
         $(this).addClass('active');
-    })
+    });
+
+
+    $('.popup form button ').on('click', function (e) {
+        e.preventDefault();
+        $(this).closest('.popup').removeClass('active');
+        $('.thank-you-popup').addClass('active');
+    });
+
+    $('.register-online').on('click', function () {
+        $('.popup').addClass('active');
+        $('.thank-you-popup').removeClass('active');
+        $('.navigation-wrapp').removeClass('active');
+        $('.burger2').removeClass('burger2-open');
+        $('html, body').animate({
+            scrollTop: 0
+        }, 600);
+    });
+
+    $('.close-popup').on('click', function () {
+        $(this).parent().removeClass('active');
+    });
+
+    $('.thank-you-popup button').on('click', function () {
+        $(this).closest('.thank-you-popup').removeClass('active');
+        $('.popup').addClass('active');
+    });
 
 
 });

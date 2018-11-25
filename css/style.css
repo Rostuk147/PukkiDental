@@ -148,9 +148,6 @@ a {
     margin-top: 30px;
 }
 
-/*.swiper-slide {*/
-/*width: 100% !important;*/
-/*}*/
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /* 06 - ACCORDEON */
@@ -226,7 +223,7 @@ a {
 header {
     position: fixed;
     width: 100%;
-    z-index: 10000;
+    z-index: 1000000;
     top: 0;
     left: 0;
     background-color: #fff;
@@ -1008,6 +1005,8 @@ footer .copyright {
     }
 }
 
+
+.thank-you-popup,
 .popup {
     background: #131719;
     position: absolute;
@@ -1015,8 +1014,22 @@ footer .copyright {
     right: 30px;
     width: 650px;
     padding: 80px 35px;
-    z-index: 1000;
+    z-index: -1;
+    opacity: 0;
+}
+
+
+.thank-you-popup.active,
+.popup.active {
+    z-index: 100000;
     opacity: 1;
+}
+
+@media (max-width: 1200px) {
+    .thank-you-popup,
+    .popup {
+        right: 15px;
+    }
 }
 
 .online-recording {
@@ -1055,6 +1068,7 @@ footer .copyright {
     font-size: 20px;
 }
 
+.thank-content button,
 .popup form button {
     display: inline-block;
     background: #fff;
@@ -1064,6 +1078,18 @@ footer .copyright {
     padding: 17px 50px;
     cursor: pointer;
     font-size: 18px;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-radius: 0;
+}
+
+.thank-content button,
+.popup form button:hover {
+    border-radius: 4px;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .popup form .form-input::placeholder {
@@ -1147,15 +1173,128 @@ footer .copyright {
 }
 
 
+.ui-widget.ui-widget-content .ui-datepicker-prev span {
+    background-image: none;
+}
+
+.ui-widget.ui-widget-content .ui-datepicker-prev span:before {
+    content: '';
+    background-image: url(../img/back.png);
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ui-widget.ui-widget-content .ui-datepicker-next span:before {
+    content: '';
+    background-image: url(../img/next.png);
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 
+.close-popup {
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    cursor: pointer;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+
+.close-popup:hover {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
 
 
+.thank-content h4 {
+    color: #fff;
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.thank-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.thank-content p {
+    font-size: 18px;
+    line-height: 23px;
+    color: #fff;
+    opacity: 0.7;
+    font-family: Roboto, sans-serif;
+}
+
+.thank-content h6 {
+    margin: 20px 0 40px 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.thank-content img {
+    width: 160px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
 
 
+@media (max-width: 991px) {
+    .thank-you-popup.active, .popup.active {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+}
 
 
+@media (max-width: 767px) {
+    .thank-you-popup.active, .popup.active {
+        top: 0px;
+        right: 0;
+        transform: none;
+        height: 100vh;
+        padding: 50px 35px;
+        width: 100%;
+        z-index: 1000000000000000;
+    }
 
+    .popup.active form {
+        padding: 0 0;
+    }
+
+    .navigation-wrapp {
+        position: fixed;
+    }
+
+    body.no-scroll,
+    html.no-scroll {
+        overflow: hidden;
+    }
+
+    @media (max-width: 767px) {
+        @media all and (orientation: landscape), all and (min-width: 480px) {
+            .thank-you-popup.active, .popup.active,
+            .navigation-wrapp {
+                overflow: scroll;
+            }
+        }
+    }
+}
 
 
 
