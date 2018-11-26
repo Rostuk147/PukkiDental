@@ -273,6 +273,7 @@ $(function () {
 
     $('.close-popup').on('click', function () {
         $(this).parent().removeClass('active');
+        $('html, body').removeClass('no-scroll');
     });
 
     $('.thank-you-popup button').on('click', function () {
