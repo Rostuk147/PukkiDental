@@ -430,6 +430,7 @@ body.fixed .register-online {
     transition: 1s ease-in-out;
     -webkit-transform: scale(0.6);
     transform: scale(0.6);
+    box-sizing: border-box;
 }
 
 .swiper-slide.swiper-slide-active .description {
@@ -1264,6 +1265,10 @@ footer .copyright {
 
 
 @media (max-width: 767px) {
+    .register-online {
+        width: 100%;
+    }
+
     .thank-you-popup.active, .popup.active {
         top: 0px;
         right: 0;
@@ -1278,14 +1283,15 @@ footer .copyright {
         padding: 0 0;
     }
 
-    .contact-item p
     .navigation-wrapp {
         position: fixed;
     }
 
+    body.no-scroll #content-block,
+    body.no-scroll .content,
     body.no-scroll,
     html.no-scroll {
-        overflow: hidden;
+        overflow: hidden !important;
     }
 
     @media (max-width: 767px) {
@@ -1293,6 +1299,10 @@ footer .copyright {
             .thank-you-popup.active, .popup.active,
             .navigation-wrapp {
                 overflow: scroll;
+            }
+
+            .slide-wrapp .description {
+                margin-bottom: 0;
             }
         }
     }
